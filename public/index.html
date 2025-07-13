@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/utility.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left  bg-black">
+            <div class="home bg-grey rounded m1 p1">
+                <div class="logo invert"><img width="110px" src="svg/logo.svg" alt=""></div>
+                <ul>
+                    <li><img class="invert" src="svg/home.svg" alt="Home" onclick="goToHome()">Home</li>
+                    <li><img class="invert" src="svg/search.svg" alt="Search">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-grey rounded m1 p1">
+                <div class="heading">
+                    <img class="invert" src="svg/playlist.svg" alt="">
+                    <h2>Your library</h2>
+
+                </div>
+                <div class="songlist">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="right bg-grey rounded p1">
+            <div class="header">
+                <div class="nav">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
+                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
+                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="top-right">
+                    <button id="logoutButton" class="logout" onclick="redirect">Logout</button>
+                    <div class="circle1"></div>
+
+
+                </div>
+            </div>
+            <div class="playlists">
+                <h1>Spotify playlists</h1>
+                <div class="card-container ">
+                    <div class="card">
+                        <div data-folder="playlist1" class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="400px" height="40px" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+                                <polygon points="35,25 75,50 35,75" fill="#000000" />
+                            </svg>
+                        </div>
+                        <img src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5ebe62cff9c6018ae5616b01eab/2/en/default"
+                            alt="">
+                        <h2>Playlist1</h2>
+                        <p>Yorushika, Eve, Radwimps and more</p>
+                    </div>
+                    <div class="card">
+                        <div data-folder="more" class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="400px" height="40px" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+                                <polygon points="35,25 75,50 35,75" fill="#000000" />
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e0218b1145d9883e5b140151fa9"
+                            alt="">
+                        <h2>More</h2>
+                        <p>Yorushika, Eve, Radwimps and more</p>
+                    </div>
+                    <div class="card">
+                        <div data-folder="playlist3" class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="400px" height="40px" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+                                <polygon points="35,25 75,50 35,75" fill="#000000" />
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e020fc9f40ffa270f17b66bcdac"
+                            alt="">
+                        <h2>Playlist3</h2>
+                        <p>Yoasobi</p>
+                    </div>
+                    <div class="card">
+                        <div data-folder="playlist4" class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="400px" height="40px" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+                                <polygon points="35,25 75,50 35,75" fill="#000000" />
+                            </svg>
+                        </div>
+                        <img src="https://wrapped-images.spotifycdn.com/image/yts-2023/default/your-top-songs-2023_DEFAULT_en.jpg"
+                            alt="">
+                        <h2>Playlist4</h2>
+                        <p>TUYU</p>
+                    </div>
+                    <div class="card">
+                        <div data-folder="Playlist5" class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="400px" height="40px" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" fill="#1DB954" stroke="none" />
+                                <polygon points="35,25 75,50 35,75" fill="#000000" />
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f0000000285a267af7eab188ae99105ad"
+                            alt="">
+                        <h2>Playlist5</h2>
+                        <p>Animenz Piano</p>
+                    </div>
+                </div>
+            </div>
+            <div class="playbar">
+                <div class="seekbar">
+                    <div class="circle"></div>
+
+                </div>
+
+                <div class="play_details" style="justify-content: space-between;">
+                    <div class="songinfo" style="width:300px; overflow:hidden; max-height: 32px;"></div>
+                    <div class="songbuttons">
+                        <img id="prev" src="svg/prevsong.svg" alt="">
+                        <img id="play" src="svg/pause.svg" alt="">
+                        <img id="next" src="svg/nextsong.svg" alt="">
+                       
+
+                    </div>
+                    <div class="timevol">
+                        <div class="songtime"></div>
+                        <div class="volume">
+                            <img src="svg/volume.svg" alt="">
+                            <div class="range">
+                                <input type="range" name="volume" id="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="../src/script.js">
+        
+    </script>
+
+</body>
+
+</html>
